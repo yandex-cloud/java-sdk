@@ -8,60 +8,48 @@ import yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint;
 import yandex.cloud.api.endpoint.ApiEndpointServiceGrpc;
 import yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+/**
+ * Factory class that creates {@link ManagedChannel} objects that corresponds to given gRPC stubs.
+ */
 public class ChannelFactory {
-    static private final String DEFAULT_ENDPOINT = "api.cloud.yandex.net";
-    static private final int DEFAULT_PORT = 443;
-    static private final Map<String, String> DEFAULT_ENDPOINT_MAP = new HashMap<String, String>() {{
-        put("operation", "operation.api.cloud.yandex.net:443");
-        put("compute", "compute.api.cloud.yandex.net:443");
-        put("iam", "iam.api.cloud.yandex.net:443");
-        put("resourcemanager", "resource-manager.api.cloud.yandex.net:443");
-        put("resource-manager", "resource-manager.api.cloud.yandex.net:443");
-        put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
-        put("managed-clickhouse", "mdb.api.cloud.yandex.net:443");
-        put("mdb-mongodb", "mdb.api.cloud.yandex.net:443");
-        put("managed-mongodb", "mdb.api.cloud.yandex.net:443");
-        put("mdb-postgresql", "mdb.api.cloud.yandex.net:443");
-        put("managed-postgresql", "mdb.api.cloud.yandex.net:443");
-        put("mdb-redis", "mdb.api.cloud.yandex.net:443");
-        put("managed-redis", "mdb.api.cloud.yandex.net:443");
-        put("mdb-mysql", "mdb.api.cloud.yandex.net:443");
-        put("managed-mysql", "mdb.api.cloud.yandex.net:443");
-        put("vpc", "vpc.api.cloud.yandex.net:443");
-        put("container-registry", "container-registry.api.cloud.yandex.net:443");
-        put("load-balancer", "load-balancer.api.cloud.yandex.net:443");
-        put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
-        put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
-        put("k8s", "mks.api.cloud.yandex.net:443");
-        put("managed-kubernetes", "mks.api.cloud.yandex.net:443");
-        put("iot-devices", "iot-devices.api.cloud.yandex.net:443");
-        put("kms", "kms.api.cloud.yandex.net:443");
-        put("endpoint", "api.cloud.yandex.net:443");
-        put("storage", "storage.yandexcloud.net:443");
-        put("serialssh", "serialssh.cloud.yandex.net:9600");
-        put("ai-translate", "translate.api.cloud.yandex.net:443");
-        put("ai-vision", "vision.api.cloud.yandex.net:443");
-        put("ai-stt", "transcribe.api.cloud.yandex.net:443");
-        put("ai-speechkit", "transcribe.api.cloud.yandex.net:443");
-    }};
+    private static final String DEFAULT_ENDPOINT = "api.cloud.yandex.net";
+    private static final int DEFAULT_PORT = 443;
 
+    /**
+     * Service name to endpoint mapping.
+     */
     private final Map<String, String> endpointMap;
-    private Map<String, ManagedChannel> channelCache;
+    /**
+     * Cached <code>ManagedChannel</code> objects that are reused for gRPC stubs of the same service
+     */
+    private final Map<String, ManagedChannel> channelCache;
 
+    /**
+     * Constructs <code>ChannelFactory</code> object for given endpoint and port.
+     * Uses default service to endpoint mapping of default endpoint and port are given.
+     * Otherwise, queries endpoint service to obtain actual service to endpoint mapping.
+     * @param endpoint Yandex.Cloud API endpoint
+     * @param port Yandex.Cloud API port
+     */
     public ChannelFactory(String endpoint, int port) {
         if (DEFAULT_ENDPOINT.equals(endpoint) && DEFAULT_PORT == port) {
-            this.endpointMap = DEFAULT_ENDPOINT_MAP;
+            this.endpointMap = ServiceToEndpointMapping.map;
         } else {
             this.endpointMap = createEndpointMapping(endpoint, port);
         }
         this.channelCache = new ConcurrentHashMap<>();
     }
 
+    /**
+     * Queries endpoint service and creates a service to endpoint mapping from the response.
+     * @param endpoint Yandex.Cloud API endpoint
+     * @param port Yandex.Cloud API port
+     * @return service to endpoint mapping
+     */
     private Map<String, String> createEndpointMapping(String endpoint, int port) {
         ApiEndpointServiceOuterClass.ListApiEndpointsResponse response;
         ManagedChannel channel = null;
@@ -83,7 +71,14 @@ public class ChannelFactory {
                 .collect(Collectors.toMap(ApiEndpoint::getId, ApiEndpoint::getAddress));
     }
 
-    public ManagedChannel create(Class<? extends io.grpc.stub.AbstractStub> clazz) {
+    /**
+     * Provides a <code>ManagedChannel</code> object that corresponds to given gRPC stub.
+     * Resolves gRPC stub class to endpoint and returns cached <code>ManagedChannel</code> object if available.
+     * Otherwise, creates a new <code>ManagedChannel</code> object for the resolved endpoint and returns it.
+     * @param clazz gRPC stub class
+     * @return <code>ManagedChannel</code> object that corresponds to the given class
+     */
+    public ManagedChannel getChannel(Class<? extends io.grpc.stub.AbstractStub> clazz) {
         return channelCache.computeIfAbsent(resolveEndpoint(clazz), endpoint -> NettyChannelBuilder.forTarget(endpoint).build());
     }
 

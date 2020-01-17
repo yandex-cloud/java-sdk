@@ -3,19 +3,47 @@ package yandex.cloud.sdk.auth.jwt;
 import java.time.Duration;
 import java.util.Objects;
 
+/**
+ * Configuration class for {@link JwtCreator}.
+ */
 public class JwtConfig {
+    /**
+     * Endpoint value used in generated JWT audience field
+     */
     private final String endpoint;
+    /**
+     * TTL value for generated JWT
+     */
     private final Duration ttl;
 
-    public JwtConfig(String endpoint, Duration ttl) {
+    /**
+     * Constructs a <code>JwtConfig</code> with specified endpoint and TTL
+     * @param endpoint value used in generated JWT audience field
+     * @param ttl TTL of generated JWT
+     */
+    private JwtConfig(String endpoint, Duration ttl) {
         this.endpoint = endpoint;
         this.ttl = ttl;
     }
 
+    /**
+     * Creates builder for <code>JwtConfig</code>
+     * @return {@link JwtConfigBuilder} object
+     */
+    public JwtConfigBuilder builder() {
+        return new JwtConfigBuilder();
+    }
+
+    /**
+     * @return endpoint value used in generated JWT audience field
+     */
     public String getEndpoint() {
         return endpoint;
     }
 
+    /**
+     * @return TTL of generated JWT
+     */
     public Duration getTtl() {
         return ttl;
     }
@@ -42,21 +70,44 @@ public class JwtConfig {
         return Objects.hash(endpoint, ttl);
     }
 
-    public class JwtConfigBuilder {
+    /**
+     * Builder class for {@link JwtConfig}.
+     */
+    public static class JwtConfigBuilder {
+        /**
+         * Endpoint value used in generated JWT audience field
+         */
         private String endpoint;
+        /**
+         * TTL value for generated JWT
+         */
         private Duration ttl;
 
-        public JwtConfigBuilder setEndpoint(String endpoint) {
+        private JwtConfigBuilder() {}
+
+        /**
+         * @param endpoint endpoint value used in generated JWT audience field
+         * @return object itself for chained calls
+         */
+        public JwtConfigBuilder endpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public JwtConfigBuilder setTtl(Duration ttl) {
+        /**
+         * @param ttl TTL value for generated JWT
+         * @return object itself for chained calls
+         */
+        public JwtConfigBuilder ttl(Duration ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public JwtConfig createJwtConfig() {
+        /**
+         * Creates {@link JwtConfig}
+         * @return {@link JwtConfig} with specified endpoint and TTL
+         */
+        public JwtConfig build() {
             return new JwtConfig(endpoint, ttl);
         }
     }

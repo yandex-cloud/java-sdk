@@ -1,5 +1,8 @@
 package yandex.cloud.sdk;
 
+/**
+ * Contains available Yandex.Cloud Compute platforms.
+ */
 public enum Platform {
     STANDARD_V1("standard-v1"),
     STANDARD_V2("standard-v2");

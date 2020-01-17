@@ -10,9 +10,13 @@ import io.grpc.MethodDescriptor;
 
 import java.util.UUID;
 
+/**
+ * An interceptor that adds required client headers: <code>x-client-request-id</code> and <code>x-client-trace-id</code>.
+ * Both values are random UUIDs.
+ */
 public class RequestIdInterceptor implements ClientInterceptor  {
-    public static final Metadata.Key<String> CLIENT_REQUEST_ID = Metadata.Key.of("x-client-request-id", Metadata.ASCII_STRING_MARSHALLER);
-    public static final Metadata.Key<String> CLIENT_TRACE_ID = Metadata.Key.of("x-client-trace-id", Metadata.ASCII_STRING_MARSHALLER);
+    private static final Metadata.Key<String> CLIENT_REQUEST_ID = Metadata.Key.of("x-client-request-id", Metadata.ASCII_STRING_MARSHALLER);
+    private static final Metadata.Key<String> CLIENT_TRACE_ID = Metadata.Key.of("x-client-trace-id", Metadata.ASCII_STRING_MARSHALLER);
 
     @Override
     public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(MethodDescriptor<ReqT, RespT> method, CallOptions callOptions, Channel next) {

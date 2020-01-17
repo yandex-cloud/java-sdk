@@ -9,6 +9,6 @@ public class OperationTimeoutException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return "Operation time out. Operation getId: " + id;
+        return "Operation timed out. Operation id: " + id;
     }
 }

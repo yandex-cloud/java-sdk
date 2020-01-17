@@ -3,30 +3,57 @@ package yandex.cloud.sdk.auth.jwt;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
-import java.security.spec.InvalidKeySpecException;
 import java.util.Objects;
 
+/**
+ * Stores service account API-key info.
+ * @see <a href="https://cloud.yandex.com/docs/iam/concepts/authorization/api-key">https://cloud.yandex.com/docs/iam/concepts/authorization/api-key</a>
+ */
 public class ServiceAccountKey {
+    /**
+     * id of service account key
+     */
     private final String keyId;
+    /**
+     * id of service account
+     */
     private final String serviceAccountId;
+    /**
+     * key creation time
+     */
     private final String createdAt;
+    /**
+     * key creation algorithm
+     */
     private final String keyAlgorithm;
+    /**
+     * public part of key
+     */
     private final PublicKey publicKey;
+    /**
+     * private part of key
+     */
     private final PrivateKey privateKey;
 
+    /**
+     * Constructor used to parse JSON structure with key
+     * @param keyId ID of API-key
+     * @param serviceAccountId ID of service account
+     * @param createdAt time of key creation
+     * @param keyAlgorithm algorithm used for public-private pair genearation (usually RSA_2048)
+     * @param publicKey generated public key
+     * @param privateKey generated private key
+     */
     @JsonCreator
-    ServiceAccountKey(
+    public ServiceAccountKey(
             @JsonProperty("id") String keyId,
             @JsonProperty("service_account_id") String serviceAccountId,
             @JsonProperty("created_at") String createdAt,
             @JsonProperty("key_algorithm") String keyAlgorithm,
             @JsonProperty("public_key") String publicKey,
-            @JsonProperty("private_key") String privateKey
-    ) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
+            @JsonProperty("private_key") String privateKey) {
         this.keyId = keyId;
         this.serviceAccountId = serviceAccountId;
         this.createdAt = createdAt;
@@ -35,26 +62,44 @@ public class ServiceAccountKey {
         this.privateKey = SecurityUtils.createRsaPrivateKey(privateKey);
     }
 
+    /**
+     * @return ID of API-key
+     */
     public String getKeyId() {
         return keyId;
     }
 
+    /**
+     * @return ID of service account
+     */
     public String getServiceAccountId() {
         return serviceAccountId;
     }
 
+    /**
+     * @return time of key creation
+     */
     public String getCreatedAt() {
         return createdAt;
     }
 
+    /**
+     * @return algorithm used for public-private pair genearation (usually RSA_2048)
+     */
     public String getKeyAlgorithm() {
         return keyAlgorithm;
     }
 
+    /**
+     * @return generated public key
+     */
     public PublicKey getPublicKey() {
         return publicKey;
     }
 
+    /**
+     * @return generated private key
+     */
     public PrivateKey getPrivateKey() {
         return privateKey;
     }
@@ -88,4 +133,3 @@ public class ServiceAccountKey {
                 '}';
     }
 }
-

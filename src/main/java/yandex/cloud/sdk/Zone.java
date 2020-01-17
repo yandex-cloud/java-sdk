@@ -1,5 +1,8 @@
 package yandex.cloud.sdk;
 
+/**
+ * Contains available Yandex.Cloud availability zones.
+ */
 public enum Zone {
     RU_CENTRAL1_A("ru-central1-a"),
     RU_CENTRAL1_B("ru-central1-b"),

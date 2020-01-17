@@ -5,7 +5,7 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 
 @Generated("StubToServiceMappingGenerator")
-public class StubToServiceMapping {
+class StubToServiceMapping {
     public final static Map<Class, String> map = new IdentityHashMap<Class, String>() {{
         put(yandex.cloud.api.ai.stt.v2.SttServiceGrpc.SttServiceBlockingStub.class, "ai-stt");
         put(yandex.cloud.api.ai.stt.v2.SttServiceGrpc.SttServiceFutureStub.class, "ai-stt");
@@ -28,6 +28,9 @@ public class StubToServiceMapping {
         put(yandex.cloud.api.compute.v1.InstanceServiceGrpc.InstanceServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.InstanceServiceGrpc.InstanceServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.InstanceServiceGrpc.InstanceServiceStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceBlockingStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceFutureStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceStub.class, "compute");
@@ -88,6 +91,12 @@ public class StubToServiceMapping {
         put(yandex.cloud.api.k8s.v1.VersionServiceGrpc.VersionServiceBlockingStub.class, "k8s");
         put(yandex.cloud.api.k8s.v1.VersionServiceGrpc.VersionServiceFutureStub.class, "k8s");
         put(yandex.cloud.api.k8s.v1.VersionServiceGrpc.VersionServiceStub.class, "k8s");
+        put(yandex.cloud.api.kms.v1.SymmetricCryptoServiceGrpc.SymmetricCryptoServiceBlockingStub.class, "kms-crypto");
+        put(yandex.cloud.api.kms.v1.SymmetricCryptoServiceGrpc.SymmetricCryptoServiceFutureStub.class, "kms-crypto");
+        put(yandex.cloud.api.kms.v1.SymmetricCryptoServiceGrpc.SymmetricCryptoServiceStub.class, "kms-crypto");
+        put(yandex.cloud.api.kms.v1.SymmetricKeyServiceGrpc.SymmetricKeyServiceBlockingStub.class, "kms");
+        put(yandex.cloud.api.kms.v1.SymmetricKeyServiceGrpc.SymmetricKeyServiceFutureStub.class, "kms");
+        put(yandex.cloud.api.kms.v1.SymmetricKeyServiceGrpc.SymmetricKeyServiceStub.class, "kms");
         put(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceGrpc.NetworkLoadBalancerServiceBlockingStub.class, "load-balancer");
         put(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceGrpc.NetworkLoadBalancerServiceFutureStub.class, "load-balancer");
         put(yandex.cloud.api.loadbalancer.v1.NetworkLoadBalancerServiceGrpc.NetworkLoadBalancerServiceStub.class, "load-balancer");
@@ -181,6 +190,9 @@ public class StubToServiceMapping {
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceBlockingStub.class, "serverless-functions");
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceFutureStub.class, "serverless-functions");
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceStub.class, "serverless-functions");
+        put(yandex.cloud.api.serverless.triggers.v1.TriggerServiceGrpc.TriggerServiceBlockingStub.class, "serverless-triggers");
+        put(yandex.cloud.api.serverless.triggers.v1.TriggerServiceGrpc.TriggerServiceFutureStub.class, "serverless-triggers");
+        put(yandex.cloud.api.serverless.triggers.v1.TriggerServiceGrpc.TriggerServiceStub.class, "serverless-triggers");
         put(yandex.cloud.api.vpc.v1.NetworkServiceGrpc.NetworkServiceBlockingStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.NetworkServiceGrpc.NetworkServiceFutureStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.NetworkServiceGrpc.NetworkServiceStub.class, "vpc");

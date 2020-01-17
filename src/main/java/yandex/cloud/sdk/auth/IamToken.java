@@ -2,13 +2,27 @@ package yandex.cloud.sdk.auth;
 
 import java.util.Objects;
 
+/**
+ * IAM token - short-lived access token issued after authentification.
+ * @see <a href="https://cloud.yandex.com/docs/iam/concepts/authorization/iam-token">https://cloud.yandex.com/docs/iam/concepts/authorization/iam-token</a> - IAM token documentation
+ */
 public class IamToken implements Credentials {
+    /**
+     * Stored IAM token
+     */
     private final String token;
 
+    /**
+     * Constructs <code>IamToken</code> object from specified string
+     * @param token IAM token string representation
+     */
     public IamToken(String token) {
         this.token = token;
     }
 
+    /**
+     * @return IAM token
+     */
     public String getToken() {
         return token;
     }
