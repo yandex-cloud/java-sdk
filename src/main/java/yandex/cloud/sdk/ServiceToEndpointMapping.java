@@ -17,6 +17,7 @@ class ServiceToEndpointMapping {
         put("dataproc-manager", "dataproc-manager.api.cloud.yandex.net:443");
         put("endpoint", "api.cloud.yandex.net:443");
         put("iam", "iam.api.cloud.yandex.net:443");
+        put("iot-data", "iot-data.api.cloud.yandex.net:443");
         put("iot-devices", "iot-devices.api.cloud.yandex.net:443");
         put("k8s", "mks.api.cloud.yandex.net:443");
         put("kms", "kms.api.cloud.yandex.net:443");
@@ -40,6 +41,7 @@ class ServiceToEndpointMapping {
         put("resource-manager", "resource-manager.api.cloud.yandex.net:443");
         put("resourcemanager", "resource-manager.api.cloud.yandex.net:443");
         put("serialssh", "serialssh.cloud.yandex.net:9600");
+        put("serverless-apigateway", "serverless-apigateway.api.cloud.yandex.net:443");
         put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
         put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
         put("storage", "storage.yandexcloud.net:443");

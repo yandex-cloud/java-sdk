@@ -7,7 +7,7 @@
 
     <groupId>com.yandex.cloud</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 
     <name>Java SDK for Yandex Cloud</name>
     <description>Java SDK for Yandex Cloud</description>
@@ -17,8 +17,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
 
-        <java-genproto.version>1.2.0</java-genproto.version>
-        <grpc.version>1.22.0</grpc.version>
+        <java-genproto.version>1.2.1</java-genproto.version>
+        <grpc.version>1.26.0</grpc.version>
         <bcprov-jdk15on.version>1.61</bcprov-jdk15on.version>
         <jjwt.version>0.10.6</jjwt.version>
 

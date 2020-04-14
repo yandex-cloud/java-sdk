@@ -43,6 +43,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.containerregistry.v1.ImageServiceGrpc.ImageServiceBlockingStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.ImageServiceGrpc.ImageServiceFutureStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.ImageServiceGrpc.ImageServiceStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceGrpc.LifecyclePolicyServiceBlockingStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceGrpc.LifecyclePolicyServiceFutureStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceGrpc.LifecyclePolicyServiceStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RegistryServiceGrpc.RegistryServiceBlockingStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RegistryServiceGrpc.RegistryServiceFutureStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RegistryServiceGrpc.RegistryServiceStub.class, "container-registry");
@@ -76,9 +79,15 @@ class StubToServiceMapping {
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceBlockingStub.class, "iam");
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceFutureStub.class, "iam");
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceStub.class, "iam");
+        put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceBlockingStub.class, "iot-data");
+        put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceFutureStub.class, "iot-data");
+        put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceStub.class, "iot-data");
         put(yandex.cloud.api.iot.devices.v1.DeviceServiceGrpc.DeviceServiceBlockingStub.class, "iot-devices");
         put(yandex.cloud.api.iot.devices.v1.DeviceServiceGrpc.DeviceServiceFutureStub.class, "iot-devices");
         put(yandex.cloud.api.iot.devices.v1.DeviceServiceGrpc.DeviceServiceStub.class, "iot-devices");
+        put(yandex.cloud.api.iot.devices.v1.RegistryDataServiceGrpc.RegistryDataServiceBlockingStub.class, "iot-data");
+        put(yandex.cloud.api.iot.devices.v1.RegistryDataServiceGrpc.RegistryDataServiceFutureStub.class, "iot-data");
+        put(yandex.cloud.api.iot.devices.v1.RegistryDataServiceGrpc.RegistryDataServiceStub.class, "iot-data");
         put(yandex.cloud.api.iot.devices.v1.RegistryServiceGrpc.RegistryServiceBlockingStub.class, "iot-devices");
         put(yandex.cloud.api.iot.devices.v1.RegistryServiceGrpc.RegistryServiceFutureStub.class, "iot-devices");
         put(yandex.cloud.api.iot.devices.v1.RegistryServiceGrpc.RegistryServiceStub.class, "iot-devices");
@@ -199,6 +208,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.vpc.v1.RouteTableServiceGrpc.RouteTableServiceBlockingStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.RouteTableServiceGrpc.RouteTableServiceFutureStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.RouteTableServiceGrpc.RouteTableServiceStub.class, "vpc");
+        put(yandex.cloud.api.vpc.v1.SecurityGroupServiceGrpc.SecurityGroupServiceBlockingStub.class, "vpc");
+        put(yandex.cloud.api.vpc.v1.SecurityGroupServiceGrpc.SecurityGroupServiceFutureStub.class, "vpc");
+        put(yandex.cloud.api.vpc.v1.SecurityGroupServiceGrpc.SecurityGroupServiceStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.SubnetServiceGrpc.SubnetServiceBlockingStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.SubnetServiceGrpc.SubnetServiceFutureStub.class, "vpc");
         put(yandex.cloud.api.vpc.v1.SubnetServiceGrpc.SubnetServiceStub.class, "vpc");
