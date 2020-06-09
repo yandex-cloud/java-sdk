@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.yandex.cloud</groupId>
+        <artifactId>java-sdk</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
+    <groupId>com.yandex.cloud</groupId>
+    <artifactId>java-sdk-services</artifactId>
+    <version>${project.parent.version}</version>
+    <packaging>jar</packaging>
+
+    <name>Yandex Cloud Services SDK for Java</name>
+    <description>Yandex Cloud Services SDK for Java</description>
+    <url>https://github.com/yandex-cloud/java-sdk</url>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://mit-license.org</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:https://github.com/yandex-cloud/java-sdk.git</connection>
+        <developerConnection>scm:git:https://github.com/yandex-cloud/java-sdk.git</developerConnection>
+        <url>https://github.com/yandex-cloud/java-sdk.git</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Gleb Mishchenko</name>
+            <email>glebmish@yandex-team.ru</email>
+            <organization>Yandex LLC</organization>
+            <organizationUrl>https://yandex.com/company/</organizationUrl>
+        </developer>
+        <developer>
+            <name>Vasilii Briginets</name>
+            <email>0x40@yandex-team.ru</email>
+            <organization>Yandex LLC</organization>
+            <organizationUrl>https://yandex.com/company/</organizationUrl>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-netty-shaded</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yandex.cloud</groupId>
+            <artifactId>java-genproto</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.yandex.cloud</groupId>
+            <artifactId>java-sdk-auth</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

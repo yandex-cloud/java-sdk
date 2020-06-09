@@ -2,17 +2,15 @@
 
 Java SDK for Yandex.Cloud services.
 
-**NOTE**: SDK is under development, and may make backwards-incompatible changes.
-
 ## Use in Maven:
 ```
 <dependency>
     <groupId>com.yandex.cloud</groupId>
-    <artifactId>sdk</artifactId>
-    <version>1.2.1</version>
+    <artifactId>java-sdk-services</artifactId>
+    <version>2.0.0</version>
 </dependency>
 ```
 
 ## Examples
 
-Examples can be found in [examples dir](src/main/java/yandex/cloud/sdk/examples).
+Examples can be found in [examples module](java-sdk-examples).
