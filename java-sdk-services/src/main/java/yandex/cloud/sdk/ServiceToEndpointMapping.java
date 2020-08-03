@@ -26,6 +26,7 @@ class ServiceToEndpointMapping {
         put("locator", "locator.api.cloud.yandex.net:443");
         put("logs", "logs.api.cloud.yandex.net:443");
         put("managed-clickhouse", "mdb.api.cloud.yandex.net:443");
+        put("managed-elasticsearch", "mdb.api.cloud.yandex.net:443");
         put("managed-kubernetes", "mks.api.cloud.yandex.net:443");
         put("managed-mongodb", "mdb.api.cloud.yandex.net:443");
         put("managed-mysql", "mdb.api.cloud.yandex.net:443");

@@ -11,12 +11,12 @@
     </parent>
 
     <groupId>com.yandex.cloud</groupId>
-    <artifactId>java-sdk-examples</artifactId>
+    <artifactId>java-sdk-functions</artifactId>
     <version>2.1.0</version>
     <packaging>jar</packaging>
 
-    <name>Yandex Cloud SDK usage examples for Java</name>
-    <description>Yandex Cloud SDK usage examples for Java</description>
+    <name>Yandex Cloud Functions Library for Java</name>
+    <description>Yandex Cloud Functions Library for Java</description>
     <url>https://github.com/yandex-cloud/java-sdk</url>
 
     <licenses>
@@ -34,30 +34,10 @@
 
     <developers>
         <developer>
-            <name>Gleb Mishchenko</name>
-            <email>glebmish@yandex-team.ru</email>
-            <organization>Yandex LLC</organization>
-            <organizationUrl>https://yandex.com/company/</organizationUrl>
-        </developer>
-        <developer>
-            <name>Vasilii Briginets</name>
-            <email>0x40@yandex-team.ru</email>
+            <name>Emil Ibragimov</name>
+            <email>buraindo@yandex-team.ru</email>
             <organization>Yandex LLC</organization>
             <organizationUrl>https://yandex.com/company/</organizationUrl>
         </developer>
     </developers>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.yandex.cloud</groupId>
-            <artifactId>java-sdk-services</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.yandex.cloud</groupId>
-            <artifactId>java-sdk-functions</artifactId>
-            <version>2.1.0</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
 </project>
