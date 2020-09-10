@@ -4,9 +4,10 @@ import yandex.cloud.sdk.auth.provider.ApiKeyCredentialProvider;
 import yandex.cloud.sdk.auth.provider.ComputeEngineCredentialProvider;
 import yandex.cloud.sdk.auth.provider.IamTokenCredentialProvider;
 import yandex.cloud.sdk.auth.provider.OauthCredentialProvider;
+import yandex.cloud.sdk.auth.provider.CredentialProvider;
 
 /**
- * Helper functions to work with {@link yandex.cloud.sdk.auth.provider.CredentialProvider}.
+ * Helper functions to work with {@link CredentialProvider}.
  */
 public class Auth {
     private Auth() {/*noninstantiable helper class*/}

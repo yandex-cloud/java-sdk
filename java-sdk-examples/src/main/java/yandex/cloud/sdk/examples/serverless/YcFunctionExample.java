@@ -17,13 +17,13 @@ public class YcFunctionExample implements YcFunction<Integer, String> {
      * see https://cloud.yandex.ru/docs/functions/concepts/function-invoke#http
      *
      * @param event integer number i
-     * @param context function context, see https://cloud.yandex.ru/docs/functions/lang/python/context
+     * @param context function context, see https://cloud.yandex.ru/docs/functions/lang/java/context
      * @return i-th fibonacci number
      */
     @Override
     public String handle(Integer event, Context context) {
-        String functionName = context.getFunctionName();
+        String id = context.getFunctionId();
         Long fib = fibonacci(event);
-        return String.format("Function %s, %dth fibonacci number is %d", functionName, event, fib);
+        return String.format("Function %s, %dth fibonacci number is %d", id, event, fib);
     }
 }

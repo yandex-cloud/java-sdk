@@ -11,6 +11,7 @@ class ServiceToEndpointMapping {
         put("ai-stt", "transcribe.api.cloud.yandex.net:443");
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
+        put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");

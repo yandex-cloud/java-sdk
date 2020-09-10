@@ -2,7 +2,7 @@ package yandex.cloud.sdk.functions;
 
 public interface Context {
     String getRequestId();
-    String getFunctionName();
+    String getFunctionId();
     String getFunctionVersion();
     int getMemoryLimit();
     String getLogGroupName();
