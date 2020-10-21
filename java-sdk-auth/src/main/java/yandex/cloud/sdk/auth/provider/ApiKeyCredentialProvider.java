@@ -11,6 +11,7 @@ import yandex.cloud.sdk.auth.apikey.ApiKey;
 import yandex.cloud.sdk.auth.apikey.InvalidServiceAccountKeyException;
 import yandex.cloud.sdk.auth.jwt.JwtCreator;
 import yandex.cloud.sdk.auth.jwt.ServiceAccountKey;
+import yandex.cloud.sdk.auth.useragent.UserAgent;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -63,6 +64,7 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
         private ServiceAccountKey serviceAccountKey;
         private JwtCreator jwtCreator;
         private String endpoint = "iam.api.cloud.yandex.net:443";
+        private String userAgent = UserAgent.DEFAULT;
 
         private Builder() {
         }
@@ -79,6 +81,11 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
 
         public Builder cloudIAMEndpoint(String endpoint) {
             this.endpoint = endpoint;
+            return this;
+        }
+
+        public Builder userAgent(String userAgent) {
+            this.userAgent = userAgent;
             return this;
         }
 
@@ -129,7 +136,7 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
                 apiKey = apiKey.withJwtCreator(jwtCreator);
             }
 
-            ManagedChannel managedChannel = NettyChannelBuilder.forTarget(endpoint).build();
+            ManagedChannel managedChannel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
             IamTokenServiceGrpc.IamTokenServiceBlockingStub stub = IamTokenServiceGrpc.newBlockingStub(managedChannel);
             return new ApiKeyCredentialProvider(apiKey, stub);
         }

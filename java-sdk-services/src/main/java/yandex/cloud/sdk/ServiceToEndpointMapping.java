@@ -12,6 +12,7 @@ class ServiceToEndpointMapping {
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
         put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
+        put("certificate-manager-data", "data.certificate-manager.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
@@ -28,6 +29,7 @@ class ServiceToEndpointMapping {
         put("logs", "logs.api.cloud.yandex.net:443");
         put("managed-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("managed-elasticsearch", "mdb.api.cloud.yandex.net:443");
+        put("managed-kafka", "mdb.api.cloud.yandex.net:443");
         put("managed-kubernetes", "mks.api.cloud.yandex.net:443");
         put("managed-mongodb", "mdb.api.cloud.yandex.net:443");
         put("managed-mysql", "mdb.api.cloud.yandex.net:443");

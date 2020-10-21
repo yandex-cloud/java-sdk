@@ -22,6 +22,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceBlockingStub.class, "certificate-manager");
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceFutureStub.class, "certificate-manager");
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceStub.class, "certificate-manager");
+        put(yandex.cloud.api.compute.v1.DiskPlacementGroupServiceGrpc.DiskPlacementGroupServiceBlockingStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.DiskPlacementGroupServiceGrpc.DiskPlacementGroupServiceFutureStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.DiskPlacementGroupServiceGrpc.DiskPlacementGroupServiceStub.class, "compute");
         put(yandex.cloud.api.compute.v1.DiskServiceGrpc.DiskServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.DiskServiceGrpc.DiskServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.DiskServiceGrpc.DiskServiceStub.class, "compute");
@@ -64,6 +67,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceBlockingStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceFutureStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceBlockingStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceFutureStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceStub.class, "container-registry");
         put(yandex.cloud.api.dataproc.manager.v1.DataprocManagerServiceGrpc.DataprocManagerServiceBlockingStub.class, "dataproc-manager");
         put(yandex.cloud.api.dataproc.manager.v1.DataprocManagerServiceGrpc.DataprocManagerServiceFutureStub.class, "dataproc-manager");
         put(yandex.cloud.api.dataproc.manager.v1.DataprocManagerServiceGrpc.DataprocManagerServiceStub.class, "dataproc-manager");

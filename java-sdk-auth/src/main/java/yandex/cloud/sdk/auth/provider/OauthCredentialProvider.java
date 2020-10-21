@@ -4,6 +4,7 @@ import io.grpc.ManagedChannel;
 import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
 import yandex.cloud.api.iam.v1.IamTokenServiceGrpc;
 import yandex.cloud.sdk.auth.IamToken;
+import yandex.cloud.sdk.auth.useragent.UserAgent;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -50,6 +51,7 @@ public class OauthCredentialProvider implements CredentialProvider {
     public static class Builder extends AbstractCredentialProviderBuilder<Builder> {
         private String oauth;
         private String endpoint = "iam.api.cloud.yandex.net:443";
+        private String userAgent = UserAgent.DEFAULT;
 
         private Builder() {
         }
@@ -61,6 +63,11 @@ public class OauthCredentialProvider implements CredentialProvider {
 
         public Builder cloudIAMEndpoint(String endpoint) {
             this.endpoint = endpoint;
+            return this;
+        }
+
+        public Builder userAgent(String userAgent) {
+            this.userAgent = userAgent;
             return this;
         }
 
@@ -100,7 +107,7 @@ public class OauthCredentialProvider implements CredentialProvider {
             if (oauth == null) {
                 throw new IllegalStateException("build oauth credential provider without oauth token");
             }
-            ManagedChannel channel = NettyChannelBuilder.forTarget(endpoint).build();
+            ManagedChannel channel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
             IamTokenServiceGrpc.IamTokenServiceBlockingStub stub = IamTokenServiceGrpc.newBlockingStub(channel);
             return new OauthCredentialProvider(oauth, stub);
         }

@@ -7,6 +7,7 @@ import io.grpc.stub.AbstractStub;
 import yandex.cloud.api.endpoint.ApiEndpointOuterClass.ApiEndpoint;
 import yandex.cloud.api.endpoint.ApiEndpointServiceGrpc;
 import yandex.cloud.api.endpoint.ApiEndpointServiceOuterClass;
+import yandex.cloud.sdk.auth.useragent.UserAgent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -19,6 +20,11 @@ public class ChannelFactory {
     public static final String DEFAULT_ENDPOINT = "api.cloud.yandex.net:443";
 
     /**
+     * User agent for API calls.
+     */
+    private final String userAgent;
+
+    /**
      * Service name to endpoint mapping.
      */
     private final Map<String, String> endpointMap;
@@ -26,6 +32,7 @@ public class ChannelFactory {
      * Cached <code>ManagedChannel</code> objects that are reused for gRPC stubs of the same service
      */
     private final Map<String, ManagedChannel> channelCache;
+
 
     /**
      * Constructs <code>ChannelFactory</code> object for default endpoint.
@@ -37,18 +44,36 @@ public class ChannelFactory {
 
     /**
      * Constructs <code>ChannelFactory</code> object for given endpoint.
-     * Uses default service to endpoint mapping of default endpoint are given.
+     * Uses default service to endpoint mapping if default endpoint are given.
      * Otherwise, queries endpoint service to obtain actual service to endpoint mapping.
      *
      * @param endpoint Yandex.Cloud API endpoint
      */
     public ChannelFactory(String endpoint) {
+        this(endpoint, "");
+    }
+
+    /**
+     * Constructs <code>ChannelFactory</code> object for given endpoint with given user agent.
+     * Uses default service to endpoint mapping if default endpoint are given.
+     * Otherwise, queries endpoint service to obtain actual service to endpoint mapping.
+     *
+     * @param endpoint Yandex.Cloud API endpoint
+     * @param userAgent user agent for API calls
+     */
+    public ChannelFactory(String endpoint, String userAgent) {
         if (DEFAULT_ENDPOINT.equals(endpoint)) {
             this.endpointMap = ServiceToEndpointMapping.map;
         } else {
             this.endpointMap = createEndpointMapping(endpoint);
         }
         this.channelCache = new ConcurrentHashMap<>();
+
+        if (userAgent == null || "".equals(userAgent.trim())) {
+            this.userAgent = UserAgent.DEFAULT;
+        } else {
+            this.userAgent = userAgent + " " + UserAgent.DEFAULT;
+        }
     }
 
     public static ChannelFactory getDefaultChannelFactory() {
@@ -66,7 +91,7 @@ public class ChannelFactory {
         ManagedChannel channel = null;
 
         try {
-            channel = NettyChannelBuilder.forTarget(endpoint).build();
+            channel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
             ApiEndpointServiceGrpc.ApiEndpointServiceBlockingStub stub = ApiEndpointServiceGrpc.newBlockingStub(channel);
             response = stub.list(ApiEndpointServiceOuterClass.ListApiEndpointsRequest.newBuilder().build());
         } catch (StatusRuntimeException e) {
@@ -91,7 +116,7 @@ public class ChannelFactory {
      */
     @SuppressWarnings("rawtypes")
     public ManagedChannel getChannel(Class<? extends io.grpc.stub.AbstractStub> clazz) {
-        return channelCache.computeIfAbsent(resolveEndpoint(clazz), endpoint -> NettyChannelBuilder.forTarget(endpoint).build());
+        return channelCache.computeIfAbsent(resolveEndpoint(clazz), endpoint -> NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build());
     }
 
     @SuppressWarnings("rawtypes")
