@@ -11,6 +11,9 @@ class ServiceToEndpointMapping {
         put("ai-stt", "transcribe.api.cloud.yandex.net:443");
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
+        put("alb", "alb.api.cloud.yandex.net:443");
+        put("application-load-balancer", "alb.api.cloud.yandex.net:443");
+        put("apploadbalancer", "alb.api.cloud.yandex.net:443");
         put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
         put("certificate-manager-data", "data.certificate-manager.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
@@ -26,6 +29,8 @@ class ServiceToEndpointMapping {
         put("kms-crypto", "kms.yandex:443");
         put("load-balancer", "load-balancer.api.cloud.yandex.net:443");
         put("locator", "locator.api.cloud.yandex.net:443");
+        put("lockbox", "lockbox.api.cloud.yandex.net:443");
+        put("lockbox-payload", "payload.lockbox.api.cloud.yandex.net:443");
         put("logs", "logs.api.cloud.yandex.net:443");
         put("managed-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("managed-elasticsearch", "mdb.api.cloud.yandex.net:443");
@@ -35,6 +40,7 @@ class ServiceToEndpointMapping {
         put("managed-mysql", "mdb.api.cloud.yandex.net:443");
         put("managed-postgresql", "mdb.api.cloud.yandex.net:443");
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
+        put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
         put("marketplace", "marketplace.api.cloud.yandex.net:443");
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("mdb-mongodb", "mdb.api.cloud.yandex.net:443");

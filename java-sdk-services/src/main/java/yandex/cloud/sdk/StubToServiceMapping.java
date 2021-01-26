@@ -148,6 +148,12 @@ class StubToServiceMapping {
         put(yandex.cloud.api.loadbalancer.v1.TargetGroupServiceGrpc.TargetGroupServiceBlockingStub.class, "load-balancer");
         put(yandex.cloud.api.loadbalancer.v1.TargetGroupServiceGrpc.TargetGroupServiceFutureStub.class, "load-balancer");
         put(yandex.cloud.api.loadbalancer.v1.TargetGroupServiceGrpc.TargetGroupServiceStub.class, "load-balancer");
+        put(yandex.cloud.api.lockbox.v1.PayloadServiceGrpc.PayloadServiceBlockingStub.class, "lockbox-payload");
+        put(yandex.cloud.api.lockbox.v1.PayloadServiceGrpc.PayloadServiceFutureStub.class, "lockbox-payload");
+        put(yandex.cloud.api.lockbox.v1.PayloadServiceGrpc.PayloadServiceStub.class, "lockbox-payload");
+        put(yandex.cloud.api.lockbox.v1.SecretServiceGrpc.SecretServiceBlockingStub.class, "lockbox");
+        put(yandex.cloud.api.lockbox.v1.SecretServiceGrpc.SecretServiceFutureStub.class, "lockbox");
+        put(yandex.cloud.api.lockbox.v1.SecretServiceGrpc.SecretServiceStub.class, "lockbox");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceBlockingStub.class, "marketplace");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceFutureStub.class, "marketplace");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceStub.class, "marketplace");
@@ -244,15 +250,6 @@ class StubToServiceMapping {
         put(yandex.cloud.api.mdb.redis.v1.ResourcePresetServiceGrpc.ResourcePresetServiceBlockingStub.class, "mdb-redis");
         put(yandex.cloud.api.mdb.redis.v1.ResourcePresetServiceGrpc.ResourcePresetServiceFutureStub.class, "mdb-redis");
         put(yandex.cloud.api.mdb.redis.v1.ResourcePresetServiceGrpc.ResourcePresetServiceStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.BackupServiceGrpc.BackupServiceBlockingStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.BackupServiceGrpc.BackupServiceFutureStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.BackupServiceGrpc.BackupServiceStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ClusterServiceGrpc.ClusterServiceBlockingStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ClusterServiceGrpc.ClusterServiceFutureStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ClusterServiceGrpc.ClusterServiceStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ResourcePresetServiceGrpc.ResourcePresetServiceBlockingStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ResourcePresetServiceGrpc.ResourcePresetServiceFutureStub.class, "mdb-redis");
-        put(yandex.cloud.api.mdb.redis.v1alpha.ResourcePresetServiceGrpc.ResourcePresetServiceStub.class, "mdb-redis");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceBlockingStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceFutureStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceStub.class, "operation");
