@@ -88,6 +88,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.dataproc.v1.SubclusterServiceGrpc.SubclusterServiceBlockingStub.class, "dataproc");
         put(yandex.cloud.api.dataproc.v1.SubclusterServiceGrpc.SubclusterServiceFutureStub.class, "dataproc");
         put(yandex.cloud.api.dataproc.v1.SubclusterServiceGrpc.SubclusterServiceStub.class, "dataproc");
+        put(yandex.cloud.api.dns.v1.DnsZoneServiceGrpc.DnsZoneServiceBlockingStub.class, "dns");
+        put(yandex.cloud.api.dns.v1.DnsZoneServiceGrpc.DnsZoneServiceFutureStub.class, "dns");
+        put(yandex.cloud.api.dns.v1.DnsZoneServiceGrpc.DnsZoneServiceStub.class, "dns");
         put(yandex.cloud.api.endpoint.ApiEndpointServiceGrpc.ApiEndpointServiceBlockingStub.class, "endpoint");
         put(yandex.cloud.api.endpoint.ApiEndpointServiceGrpc.ApiEndpointServiceFutureStub.class, "endpoint");
         put(yandex.cloud.api.endpoint.ApiEndpointServiceGrpc.ApiEndpointServiceStub.class, "endpoint");
@@ -259,6 +262,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.resourcemanager.v1.FolderServiceGrpc.FolderServiceBlockingStub.class, "resourcemanager");
         put(yandex.cloud.api.resourcemanager.v1.FolderServiceGrpc.FolderServiceFutureStub.class, "resourcemanager");
         put(yandex.cloud.api.resourcemanager.v1.FolderServiceGrpc.FolderServiceStub.class, "resourcemanager");
+        put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceBlockingStub.class, "serverless-apigateway");
+        put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceFutureStub.class, "serverless-apigateway");
+        put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceStub.class, "serverless-apigateway");
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceBlockingStub.class, "serverless-functions");
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceFutureStub.class, "serverless-functions");
         put(yandex.cloud.api.serverless.functions.v1.FunctionServiceGrpc.FunctionServiceStub.class, "serverless-functions");

@@ -20,6 +20,7 @@ class ServiceToEndpointMapping {
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
         put("dataproc-manager", "dataproc-manager.api.cloud.yandex.net:443");
+        put("dns", "dns.api.cloud.yandex.net:443");
         put("endpoint", "api.cloud.yandex.net:443");
         put("iam", "iam.api.cloud.yandex.net:443");
         put("iot-data", "iot-data.api.cloud.yandex.net:443");
