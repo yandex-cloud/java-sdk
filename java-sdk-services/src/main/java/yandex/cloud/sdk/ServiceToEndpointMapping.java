@@ -49,6 +49,8 @@ class ServiceToEndpointMapping {
         put("mdb-postgresql", "mdb.api.cloud.yandex.net:443");
         put("mdb-redis", "mdb.api.cloud.yandex.net:443");
         put("operation", "operation.api.cloud.yandex.net:443");
+        put("organization-manager", "organization-manager.api.cloud.yandex.net:443");
+        put("organizationmanager", "organization-manager.api.cloud.yandex.net:443");
         put("resource-manager", "resource-manager.api.cloud.yandex.net:443");
         put("resourcemanager", "resource-manager.api.cloud.yandex.net:443");
         put("serialssh", "serialssh.cloud.yandex.net:9600");

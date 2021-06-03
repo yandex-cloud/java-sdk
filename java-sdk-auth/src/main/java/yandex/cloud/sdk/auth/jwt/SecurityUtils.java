@@ -32,7 +32,7 @@ public class SecurityUtils {
      */
     public static PrivateKey createRsaPrivateKey(String keyPem) {
         try {
-            PemObject pemObject = new PemReader(new StringReader(keyPem)).readPemObject();
+            PemObject pemObject = new   PemReader(new StringReader(keyPem)).readPemObject();
             PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(pemObject.getContent());
             KeyFactory keyFactory = KeyFactory.getInstance(RSA_ALGORITHM_FAMILY);
             return keyFactory.generatePrivate(keySpec);
@@ -48,8 +48,8 @@ public class SecurityUtils {
      * @throws RSAException if an exception occurs during creation of RSA public key
      */
     public static PublicKey createRsaPublicKey(String keyPem) {
-        try {
-            PemObject pemObject = new PemReader(new StringReader(keyPem)).readPemObject();
+        try (PemReader pemReader = new PemReader(new StringReader(keyPem))) {
+            PemObject pemObject = pemReader.readPemObject();
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(pemObject.getContent());
             KeyFactory keyFactory = KeyFactory.getInstance(RSA_ALGORITHM_FAMILY);
             return keyFactory.generatePublic(keySpec);
