@@ -31,9 +31,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceGrpc.VirtualHostServiceBlockingStub.class, "apploadbalancer");
         put(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceGrpc.VirtualHostServiceFutureStub.class, "apploadbalancer");
         put(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceGrpc.VirtualHostServiceStub.class, "apploadbalancer");
-        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceBlockingStub.class, "certificate-manager");
-        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceFutureStub.class, "certificate-manager");
-        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceStub.class, "certificate-manager");
+        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceBlockingStub.class, "certificate-manager-data");
+        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceFutureStub.class, "certificate-manager-data");
+        put(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceGrpc.CertificateContentServiceStub.class, "certificate-manager-data");
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceBlockingStub.class, "certificate-manager");
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceFutureStub.class, "certificate-manager");
         put(yandex.cloud.api.certificatemanager.v1.CertificateServiceGrpc.CertificateServiceStub.class, "certificate-manager");
