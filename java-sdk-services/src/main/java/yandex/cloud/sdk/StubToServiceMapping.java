@@ -46,6 +46,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.compute.v1.DiskTypeServiceGrpc.DiskTypeServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.DiskTypeServiceGrpc.DiskTypeServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.DiskTypeServiceGrpc.DiskTypeServiceStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceBlockingStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceFutureStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceStub.class, "compute");
@@ -214,6 +217,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.mdb.kafka.v1.ClusterServiceGrpc.ClusterServiceBlockingStub.class, "managed-kafka");
         put(yandex.cloud.api.mdb.kafka.v1.ClusterServiceGrpc.ClusterServiceFutureStub.class, "managed-kafka");
         put(yandex.cloud.api.mdb.kafka.v1.ClusterServiceGrpc.ClusterServiceStub.class, "managed-kafka");
+        put(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceGrpc.ConnectorServiceBlockingStub.class, "managed-kafka");
+        put(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceGrpc.ConnectorServiceFutureStub.class, "managed-kafka");
+        put(yandex.cloud.api.mdb.kafka.v1.ConnectorServiceGrpc.ConnectorServiceStub.class, "managed-kafka");
         put(yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceGrpc.ResourcePresetServiceBlockingStub.class, "managed-kafka");
         put(yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceGrpc.ResourcePresetServiceFutureStub.class, "managed-kafka");
         put(yandex.cloud.api.mdb.kafka.v1.ResourcePresetServiceGrpc.ResourcePresetServiceStub.class, "managed-kafka");
