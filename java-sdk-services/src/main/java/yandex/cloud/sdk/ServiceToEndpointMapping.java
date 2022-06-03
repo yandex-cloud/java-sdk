@@ -18,6 +18,7 @@ class ServiceToEndpointMapping {
         put("cdn", "cdn.api.cloud.yandex.net:443");
         put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
         put("certificate-manager-data", "data.certificate-manager.api.cloud.yandex.net:443");
+        put("clouddesktops", "clouddesktops.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
@@ -58,6 +59,7 @@ class ServiceToEndpointMapping {
         put("mdb-postgresql", "mdb.api.cloud.yandex.net:443");
         put("mdb-redis", "mdb.api.cloud.yandex.net:443");
         put("mdbproxy", "mdbproxy.api.cloud.yandex.net:443");
+        put("monitoring", "monitoring.api.cloud.yandex.net:443");
         put("operation", "operation.api.cloud.yandex.net:443");
         put("organization-manager", "organization-manager.api.cloud.yandex.net:443");
         put("organizationmanager", "organization-manager.api.cloud.yandex.net:443");
@@ -69,6 +71,7 @@ class ServiceToEndpointMapping {
         put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
         put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
         put("storage", "storage.yandexcloud.net:443");
+        put("storage-api", "storage.api.cloud.yandex.net:443");
         put("vpc", "vpc.api.cloud.yandex.net:443");
         put("ydb", "ydb.api.cloud.yandex.net:443");
     }};
