@@ -28,6 +28,7 @@ class ServiceToEndpointMapping {
         put("dns", "dns.api.cloud.yandex.net:443");
         put("endpoint", "api.cloud.yandex.net:443");
         put("iam", "iam.api.cloud.yandex.net:443");
+        put("iot-broker", "iot-broker.api.cloud.yandex.net:443");
         put("iot-data", "iot-data.api.cloud.yandex.net:443");
         put("iot-devices", "iot-devices.api.cloud.yandex.net:443");
         put("k8s", "mks.api.cloud.yandex.net:443");

@@ -241,12 +241,12 @@ class StubToServiceMapping {
         put(yandex.cloud.api.logging.v1.LogGroupServiceGrpc.LogGroupServiceBlockingStub.class, "logging");
         put(yandex.cloud.api.logging.v1.LogGroupServiceGrpc.LogGroupServiceFutureStub.class, "logging");
         put(yandex.cloud.api.logging.v1.LogGroupServiceGrpc.LogGroupServiceStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceBlockingStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceFutureStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceBlockingStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceFutureStub.class, "logging");
-        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceStub.class, "logging");
+        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceBlockingStub.class, "log-ingestion");
+        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceFutureStub.class, "log-ingestion");
+        put(yandex.cloud.api.logging.v1.LogIngestionServiceGrpc.LogIngestionServiceStub.class, "log-ingestion");
+        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceBlockingStub.class, "log-reading");
+        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceFutureStub.class, "log-reading");
+        put(yandex.cloud.api.logging.v1.LogReadingServiceGrpc.LogReadingServiceStub.class, "log-reading");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceBlockingStub.class, "marketplace");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceFutureStub.class, "marketplace");
         put(yandex.cloud.api.marketplace.v1.metering.ImageProductUsageServiceGrpc.ImageProductUsageServiceStub.class, "marketplace");
