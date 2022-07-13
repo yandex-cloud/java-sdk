@@ -403,6 +403,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceBlockingStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceFutureStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceStub.class, "operation");
+        put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceBlockingStub.class, "organization-manager");
+        put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceFutureStub.class, "organization-manager");
+        put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.OrganizationServiceGrpc.OrganizationServiceBlockingStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.OrganizationServiceGrpc.OrganizationServiceFutureStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.OrganizationServiceGrpc.OrganizationServiceStub.class, "organization-manager");
