@@ -106,6 +106,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.PlacementGroupServiceGrpc.PlacementGroupServiceStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.SnapshotScheduleServiceGrpc.SnapshotScheduleServiceBlockingStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.SnapshotScheduleServiceGrpc.SnapshotScheduleServiceFutureStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.SnapshotScheduleServiceGrpc.SnapshotScheduleServiceStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.SnapshotServiceGrpc.SnapshotServiceStub.class, "compute");
@@ -199,6 +202,12 @@ class StubToServiceMapping {
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceBlockingStub.class, "iam");
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceFutureStub.class, "iam");
         put(yandex.cloud.api.iam.v1.awscompatibility.AccessKeyServiceGrpc.AccessKeyServiceStub.class, "iam");
+        put(yandex.cloud.api.iot.broker.v1.BrokerDataServiceGrpc.BrokerDataServiceBlockingStub.class, "iot-broker");
+        put(yandex.cloud.api.iot.broker.v1.BrokerDataServiceGrpc.BrokerDataServiceFutureStub.class, "iot-broker");
+        put(yandex.cloud.api.iot.broker.v1.BrokerDataServiceGrpc.BrokerDataServiceStub.class, "iot-broker");
+        put(yandex.cloud.api.iot.broker.v1.BrokerServiceGrpc.BrokerServiceBlockingStub.class, "iot-broker");
+        put(yandex.cloud.api.iot.broker.v1.BrokerServiceGrpc.BrokerServiceFutureStub.class, "iot-broker");
+        put(yandex.cloud.api.iot.broker.v1.BrokerServiceGrpc.BrokerServiceStub.class, "iot-broker");
         put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceBlockingStub.class, "iot-data");
         put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceFutureStub.class, "iot-data");
         put(yandex.cloud.api.iot.devices.v1.DeviceDataServiceGrpc.DeviceDataServiceStub.class, "iot-data");
@@ -400,6 +409,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.mdb.sqlserver.v1.UserServiceGrpc.UserServiceBlockingStub.class, "managed-sqlserver");
         put(yandex.cloud.api.mdb.sqlserver.v1.UserServiceGrpc.UserServiceFutureStub.class, "managed-sqlserver");
         put(yandex.cloud.api.mdb.sqlserver.v1.UserServiceGrpc.UserServiceStub.class, "managed-sqlserver");
+        put(yandex.cloud.api.monitoring.v3.DashboardServiceGrpc.DashboardServiceBlockingStub.class, "monitoring");
+        put(yandex.cloud.api.monitoring.v3.DashboardServiceGrpc.DashboardServiceFutureStub.class, "monitoring");
+        put(yandex.cloud.api.monitoring.v3.DashboardServiceGrpc.DashboardServiceStub.class, "monitoring");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceBlockingStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceFutureStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceStub.class, "operation");
@@ -427,6 +439,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceBlockingStub.class, "serverless-apigateway");
         put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceFutureStub.class, "serverless-apigateway");
         put(yandex.cloud.api.serverless.apigateway.v1.ApiGatewayServiceGrpc.ApiGatewayServiceStub.class, "serverless-apigateway");
+        put(yandex.cloud.api.serverless.apigateway.websocket.v1.ConnectionServiceGrpc.ConnectionServiceBlockingStub.class, "serverless-gateway-connections");
+        put(yandex.cloud.api.serverless.apigateway.websocket.v1.ConnectionServiceGrpc.ConnectionServiceFutureStub.class, "serverless-gateway-connections");
+        put(yandex.cloud.api.serverless.apigateway.websocket.v1.ConnectionServiceGrpc.ConnectionServiceStub.class, "serverless-gateway-connections");
         put(yandex.cloud.api.serverless.containers.v1.ContainerServiceGrpc.ContainerServiceBlockingStub.class, "serverless-containers");
         put(yandex.cloud.api.serverless.containers.v1.ContainerServiceGrpc.ContainerServiceFutureStub.class, "serverless-containers");
         put(yandex.cloud.api.serverless.containers.v1.ContainerServiceGrpc.ContainerServiceStub.class, "serverless-containers");

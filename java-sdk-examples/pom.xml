@@ -7,12 +7,12 @@
     <parent>
         <groupId>com.yandex.cloud</groupId>
         <artifactId>java-sdk</artifactId>
-        <version>2.5.1</version>
+        <version>2.5.2</version>
     </parent>
 
     <groupId>com.yandex.cloud</groupId>
     <artifactId>java-sdk-examples</artifactId>
-    <version>2.5.1</version>
+    <version>2.5.2</version>
     <packaging>jar</packaging>
 
     <name>Yandex Cloud SDK usage examples for Java</name>
@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.yandex.cloud</groupId>
             <artifactId>java-sdk-functions</artifactId>
-            <version>2.5.1</version>
+            <version>2.5.2</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

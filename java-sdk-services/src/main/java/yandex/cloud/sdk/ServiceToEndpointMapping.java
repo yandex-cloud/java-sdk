@@ -12,12 +12,17 @@ class ServiceToEndpointMapping {
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
         put("alb", "alb.api.cloud.yandex.net:443");
+        put("apigateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("application-load-balancer", "alb.api.cloud.yandex.net:443");
         put("apploadbalancer", "alb.api.cloud.yandex.net:443");
+        put("baas", "backup.api.cloud.yandex.net:443");
+        put("backup", "backup.api.cloud.yandex.net:443");
         put("billing", "billing.api.cloud.yandex.net:443");
+        put("broker-data", "iot-data.api.cloud.yandex.net:443");
         put("cdn", "cdn.api.cloud.yandex.net:443");
         put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
         put("certificate-manager-data", "data.certificate-manager.api.cloud.yandex.net:443");
+        put("cloudbackup", "backup.api.cloud.yandex.net:443");
         put("clouddesktops", "clouddesktops.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
@@ -70,6 +75,7 @@ class ServiceToEndpointMapping {
         put("serverless-apigateway", "serverless-apigateway.api.cloud.yandex.net:443");
         put("serverless-containers", "serverless-containers.api.cloud.yandex.net:443");
         put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
+        put("serverless-gateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
         put("storage", "storage.yandexcloud.net:443");
         put("storage-api", "storage.api.cloud.yandex.net:443");
