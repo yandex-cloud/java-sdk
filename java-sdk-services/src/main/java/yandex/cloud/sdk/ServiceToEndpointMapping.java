@@ -55,6 +55,7 @@ class ServiceToEndpointMapping {
         put("managed-kubernetes", "mks.api.cloud.yandex.net:443");
         put("managed-mongodb", "mdb.api.cloud.yandex.net:443");
         put("managed-mysql", "mdb.api.cloud.yandex.net:443");
+        put("managed-opensearch", "mdb.api.cloud.yandex.net:443");
         put("managed-postgresql", "mdb.api.cloud.yandex.net:443");
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
         put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
@@ -62,6 +63,7 @@ class ServiceToEndpointMapping {
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("mdb-mongodb", "mdb.api.cloud.yandex.net:443");
         put("mdb-mysql", "mdb.api.cloud.yandex.net:443");
+        put("mdb-opensearch", "mdb.api.cloud.yandex.net:443");
         put("mdb-postgresql", "mdb.api.cloud.yandex.net:443");
         put("mdb-redis", "mdb.api.cloud.yandex.net:443");
         put("mdbproxy", "mdbproxy.api.cloud.yandex.net:443");

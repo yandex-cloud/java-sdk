@@ -3,20 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <parent>
         <groupId>com.yandex.cloud</groupId>
         <artifactId>java-sdk</artifactId>
-        <version>2.5.3</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.yandex.cloud</groupId>
-    <artifactId>java-sdk-functions</artifactId>
-    <version>2.5.3</version>
+    <artifactId>yandex-sdk-serverless</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Yandex Cloud Functions Library for Java</name>
-    <description>Yandex Cloud Functions Library for Java</description>
+    <name>Yandex Cloud Serverless SDK for Java</name>
+    <description>Yandex Cloud Serverless SDK for Java</description>
     <url>https://github.com/yandex-cloud/java-sdk</url>
 
     <licenses>
@@ -32,12 +44,4 @@
         <url>https://github.com/yandex-cloud/java-sdk.git</url>
     </scm>
 
-    <developers>
-        <developer>
-            <name>Emil Ibragimov</name>
-            <email>buraindo@yandex-team.ru</email>
-            <organization>Yandex LLC</organization>
-            <organizationUrl>https://yandex.com/company/</organizationUrl>
-        </developer>
-    </developers>
 </project>

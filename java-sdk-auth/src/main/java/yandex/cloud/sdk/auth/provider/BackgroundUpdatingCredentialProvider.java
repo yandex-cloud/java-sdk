@@ -46,7 +46,7 @@ class BackgroundUpdatingCredentialProvider implements CredentialProvider {
             }
             nextUpdate = Duration.ofMillis((long) (delay * (1 + jitter * (Math.random() * 2 - 1))));
         }
-        updateScheduler.schedule(this::updateAndScheduleNext, nextUpdate.toNanos(), TimeUnit.MICROSECONDS);
+        updateScheduler.schedule(this::updateAndScheduleNext, nextUpdate.toNanos(), TimeUnit.NANOSECONDS);
     }
 
 }
