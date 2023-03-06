@@ -31,14 +31,22 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
      */
     private final ApiKey key;
 
+    private final ManagedChannel channel;
+
     /**
      * Iam token service stub used to exchanges API key for IAM token
      */
     private final IamTokenServiceGrpc.IamTokenServiceBlockingStub iamTokenService;
 
-    private ApiKeyCredentialProvider(ApiKey key, IamTokenServiceGrpc.IamTokenServiceBlockingStub iamTokenService) {
+    private ApiKeyCredentialProvider(ApiKey key, ManagedChannel channel) {
         this.key = key;
-        this.iamTokenService = iamTokenService;
+        this.channel = channel;
+        this.iamTokenService = IamTokenServiceGrpc.newBlockingStub(channel);
+    }
+
+    @Override
+    public void close() {
+        channel.shutdown();
     }
 
     /**
@@ -137,8 +145,7 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
             }
 
             ManagedChannel managedChannel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
-            IamTokenServiceGrpc.IamTokenServiceBlockingStub stub = IamTokenServiceGrpc.newBlockingStub(managedChannel);
-            return new ApiKeyCredentialProvider(apiKey, stub);
+            return new ApiKeyCredentialProvider(apiKey, managedChannel);
         }
 
         private static ServiceAccountKey readKeyFromJsonFile(Path path) {

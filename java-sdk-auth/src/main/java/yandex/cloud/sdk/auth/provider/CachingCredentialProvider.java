@@ -17,6 +17,11 @@ public class CachingCredentialProvider implements CredentialProvider {
     }
 
     @Override
+    public void close() {
+        delegate.close();
+    }
+
+    @Override
     public IamToken get() {
         Instant now = Instant.now();
         Instant expiresAt = iamToken == null ? Instant.MIN : iamToken.getExpiresAt();

@@ -91,6 +91,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.FilesystemServiceGrpc.FilesystemServiceStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.GpuClusterServiceGrpc.GpuClusterServiceBlockingStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.GpuClusterServiceGrpc.GpuClusterServiceFutureStub.class, "compute");
+        put(yandex.cloud.api.compute.v1.GpuClusterServiceGrpc.GpuClusterServiceStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceBlockingStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceFutureStub.class, "compute");
         put(yandex.cloud.api.compute.v1.HostGroupServiceGrpc.HostGroupServiceStub.class, "compute");

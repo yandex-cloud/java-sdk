@@ -27,6 +27,11 @@ class BackgroundUpdatingCredentialProvider implements CredentialProvider {
     }
 
     @Override
+    public void close() {
+        delegate.close();
+    }
+
+    @Override
     public IamToken get() {
         if (Instant.now().isBefore(iamToken.getExpiresAt())) {
             return iamToken;

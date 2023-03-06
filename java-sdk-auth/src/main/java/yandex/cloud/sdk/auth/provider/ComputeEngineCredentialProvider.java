@@ -22,6 +22,11 @@ public class ComputeEngineCredentialProvider implements CredentialProvider {
         this.metadataService = metadataService;
     }
 
+    @Override
+    public void close() {
+        // Nothing
+    }
+
     /**
      * Creates builder for <code>ComputeEngineCredentialProvider</code>
      *

@@ -20,6 +20,11 @@ public class IamTokenCredentialProvider implements CredentialProvider {
     }
 
     @Override
+    public void close() {
+        // Nothing
+    }
+
+    @Override
     public IamToken get() {
         return iamToken;
     }

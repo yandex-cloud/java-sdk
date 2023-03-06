@@ -22,11 +22,18 @@ import static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRe
  */
 public class OauthCredentialProvider implements CredentialProvider {
     private final String oauth;
+    private final ManagedChannel channel;
     private final IamTokenServiceGrpc.IamTokenServiceBlockingStub iamTokenService;
 
-    private OauthCredentialProvider(String oauth, IamTokenServiceGrpc.IamTokenServiceBlockingStub iamTokenService) {
+    private OauthCredentialProvider(String oauth, ManagedChannel channel) {
         this.oauth = oauth;
-        this.iamTokenService = iamTokenService;
+        this.channel = channel;
+        this.iamTokenService = IamTokenServiceGrpc.newBlockingStub(channel);
+    }
+
+    @Override
+    public void close() {
+        channel.shutdown();
     }
 
     /**
@@ -108,8 +115,7 @@ public class OauthCredentialProvider implements CredentialProvider {
                 throw new IllegalStateException("build oauth credential provider without oauth token");
             }
             ManagedChannel channel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
-            IamTokenServiceGrpc.IamTokenServiceBlockingStub stub = IamTokenServiceGrpc.newBlockingStub(channel);
-            return new OauthCredentialProvider(oauth, stub);
+            return new OauthCredentialProvider(oauth, channel);
         }
     }
 
