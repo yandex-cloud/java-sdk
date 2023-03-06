@@ -61,7 +61,7 @@
 
         <grpc.version>1.43.2</grpc.version>
         <java-genproto.version>2.6.0</java-genproto.version>
-        <bcprov-jdk15on.version>1.61</bcprov-jdk15on.version>
+        <bcprov-jdk15on.version>1.67</bcprov-jdk15on.version>
         <jjwt.version>0.10.6</jjwt.version>
 
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
