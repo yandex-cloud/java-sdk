@@ -382,6 +382,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceGrpc.DatabaseServiceBlockingStub.class, "mdb-postgresql");
         put(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceGrpc.DatabaseServiceFutureStub.class, "mdb-postgresql");
         put(yandex.cloud.api.mdb.postgresql.v1.DatabaseServiceGrpc.DatabaseServiceStub.class, "mdb-postgresql");
+        put(yandex.cloud.api.mdb.postgresql.v1.PerformanceDiagnosticsServiceGrpc.PerformanceDiagnosticsServiceBlockingStub.class, "mdb-postgresql");
+        put(yandex.cloud.api.mdb.postgresql.v1.PerformanceDiagnosticsServiceGrpc.PerformanceDiagnosticsServiceFutureStub.class, "mdb-postgresql");
+        put(yandex.cloud.api.mdb.postgresql.v1.PerformanceDiagnosticsServiceGrpc.PerformanceDiagnosticsServiceStub.class, "mdb-postgresql");
         put(yandex.cloud.api.mdb.postgresql.v1.ResourcePresetServiceGrpc.ResourcePresetServiceBlockingStub.class, "mdb-postgresql");
         put(yandex.cloud.api.mdb.postgresql.v1.ResourcePresetServiceGrpc.ResourcePresetServiceFutureStub.class, "mdb-postgresql");
         put(yandex.cloud.api.mdb.postgresql.v1.ResourcePresetServiceGrpc.ResourcePresetServiceStub.class, "mdb-postgresql");
@@ -418,6 +421,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceBlockingStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceFutureStub.class, "operation");
         put(yandex.cloud.api.operation.OperationServiceGrpc.OperationServiceStub.class, "operation");
+        put(yandex.cloud.api.organizationmanager.v1.GroupMappingServiceGrpc.GroupMappingServiceBlockingStub.class, "organization-manager");
+        put(yandex.cloud.api.organizationmanager.v1.GroupMappingServiceGrpc.GroupMappingServiceFutureStub.class, "organization-manager");
+        put(yandex.cloud.api.organizationmanager.v1.GroupMappingServiceGrpc.GroupMappingServiceStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceBlockingStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceFutureStub.class, "organization-manager");
         put(yandex.cloud.api.organizationmanager.v1.GroupServiceGrpc.GroupServiceStub.class, "organization-manager");
