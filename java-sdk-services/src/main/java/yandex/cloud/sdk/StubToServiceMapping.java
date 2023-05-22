@@ -133,6 +133,9 @@ class StubToServiceMapping {
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceBlockingStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceFutureStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.RepositoryServiceGrpc.RepositoryServiceStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScanPolicyServiceGrpc.ScanPolicyServiceBlockingStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScanPolicyServiceGrpc.ScanPolicyServiceFutureStub.class, "container-registry");
+        put(yandex.cloud.api.containerregistry.v1.ScanPolicyServiceGrpc.ScanPolicyServiceStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceBlockingStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceFutureStub.class, "container-registry");
         put(yandex.cloud.api.containerregistry.v1.ScannerServiceGrpc.ScannerServiceStub.class, "container-registry");
