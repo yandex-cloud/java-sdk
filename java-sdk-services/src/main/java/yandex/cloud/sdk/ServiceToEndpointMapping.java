@@ -11,6 +11,7 @@ class ServiceToEndpointMapping {
         put("ai-stt", "transcribe.api.cloud.yandex.net:443");
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
+        put("ai-vision-ocr", "ocr.api.cloud.yandex.net:443");
         put("alb", "alb.api.cloud.yandex.net:443");
         put("apigateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("application-load-balancer", "alb.api.cloud.yandex.net:443");
