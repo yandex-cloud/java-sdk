@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yandex.cloud</groupId>
+    <groupId>org.netpole.com.yandex.cloud</groupId>
     <artifactId>java-sdk</artifactId>
-    <version>2.6.4</version>
+    <version>2.6.5-netpole</version>
     <packaging>pom</packaging>
 
     <name>Yandex Cloud SDK for Java</name>
@@ -61,7 +61,7 @@
         <maven.compiler.target>8</maven.compiler.target>
 
         <grpc.version>1.43.2</grpc.version>
-        <java-genproto.version>2.6.4</java-genproto.version>
+        <java-genproto.version>2.6.5</java-genproto.version>
         <bcprov-jdk15on.version>1.61</bcprov-jdk15on.version>
         <jjwt.version>0.10.8</jjwt.version>
 

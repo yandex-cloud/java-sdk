@@ -7,6 +7,27 @@ import java.util.Map;
 @Generated("StubToServiceMappingGenerator")
 class StubToServiceMapping {
     public final static Map<Class, String> map = new IdentityHashMap<Class, String>() {{
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceGrpc.TextGenerationServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceGrpc.TextGenerationServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceGrpc.TextGenerationServiceStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationAsyncServiceGrpc.TextGenerationAsyncServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationAsyncServiceGrpc.TextGenerationAsyncServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TextGenerationAsyncServiceGrpc.TextGenerationAsyncServiceStub.class, "ai-foundation-models");
+
+        put(yandex.cloud.api.ai.foundation_models.v1.EmbeddingsServiceGrpc.EmbeddingsServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.EmbeddingsServiceGrpc.EmbeddingsServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.EmbeddingsServiceGrpc.EmbeddingsServiceStub.class, "ai-foundation-models");
+
+        put(yandex.cloud.api.ai.foundation_models.v1.TokenizerServiceGrpc.TokenizerServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TokenizerServiceGrpc.TokenizerServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.TokenizerServiceGrpc.TokenizerServiceStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceGrpc.TextClassificationServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceGrpc.TextClassificationServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceGrpc.TextClassificationServiceStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationAsyncServiceGrpc.ImageGenerationAsyncServiceBlockingStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationAsyncServiceGrpc.ImageGenerationAsyncServiceFutureStub.class, "ai-foundation-models");
+        put(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationAsyncServiceGrpc.ImageGenerationAsyncServiceStub.class, "ai-foundation-models");
+
         put(yandex.cloud.api.ai.llm.v1alpha.TextGenerationServiceGrpc.TextGenerationServiceBlockingStub.class, "ai-stt");
         put(yandex.cloud.api.ai.llm.v1alpha.TextGenerationServiceGrpc.TextGenerationServiceFutureStub.class, "ai-stt");
         put(yandex.cloud.api.ai.llm.v1alpha.TextGenerationServiceGrpc.TextGenerationServiceStub.class, "ai-stt");

@@ -7,6 +7,7 @@ import io.grpc.ManagedChannel;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import yandex.cloud.sdk.auth.provider.CredentialProvider;
+import yandex.cloud.sdk.grpc.interceptors.DataLoggingEnabledInterceptor;
 import yandex.cloud.sdk.grpc.interceptors.DeadlineClientInterceptor;
 import yandex.cloud.sdk.grpc.interceptors.RequestIdInterceptor;
 
@@ -25,11 +26,13 @@ public class ServiceFactory {
 
     private final CredentialProvider credentialProvider;
     private final Duration requestTimeout;
+    private final boolean dataLoggingEnabled;
     private final ChannelFactory channelFactory;
 
-    private ServiceFactory(CredentialProvider credentialProvider, Duration requestTimeout, ChannelFactory channelFactory) {
+    private ServiceFactory(CredentialProvider credentialProvider, Duration requestTimeout, boolean dataLoggingEnabled, ChannelFactory channelFactory) {
         this.credentialProvider = credentialProvider;
         this.requestTimeout = requestTimeout;
+        this.dataLoggingEnabled = dataLoggingEnabled;
         this.channelFactory = channelFactory;
     }
 
@@ -142,6 +145,7 @@ public class ServiceFactory {
             interceptors.add(DeadlineClientInterceptor.fromDuration(requestTimeout));
         }
         interceptors.add(new RequestIdInterceptor());
+        interceptors.add(new DataLoggingEnabledInterceptor(dataLoggingEnabled));
 
         return interceptors.toArray(new ClientInterceptor[0]);
     }
@@ -164,6 +168,8 @@ public class ServiceFactory {
          * Configured default timeout for gRPC calls
          */
         private Duration requestTimeout = DEFAULT_REQUEST_TIMEOUT;
+
+        private boolean dataLoggingEnabled = true;
 
         private ServiceFactoryBuilder() {
         }
@@ -206,12 +212,21 @@ public class ServiceFactory {
         }
 
         /**
+         * @param dataLoggingEnabled Disabling request logging.
+         * @return object itself for chained calls
+         */
+        public ServiceFactoryBuilder requestTimeout(boolean dataLoggingEnabled) {
+            this.dataLoggingEnabled = dataLoggingEnabled;
+            return this;
+        }
+
+        /**
          * Creates {@link ServiceFactory}
          *
          * @return {@link ServiceFactory} with specified parameters
          */
         public ServiceFactory build() {
-            return new ServiceFactory(credentialProvider, requestTimeout, channelFactory);
+            return new ServiceFactory(credentialProvider, requestTimeout, dataLoggingEnabled, channelFactory);
         }
 
         @Override

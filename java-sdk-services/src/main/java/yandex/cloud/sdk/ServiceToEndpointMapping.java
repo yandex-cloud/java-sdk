@@ -7,6 +7,7 @@ import java.util.Map;
 @Generated("ServiceToEndpointMappingGenerator")
 class ServiceToEndpointMapping {
     public final static Map<String, String> map = new IdentityHashMap<String, String>() {{
+        put("ai-foundation-models", "llm.api.cloud.yandex.net:443");
         put("ai-speechkit", "transcribe.api.cloud.yandex.net:443");
         put("ai-stt", "transcribe.api.cloud.yandex.net:443");
         put("ai-translate", "translate.api.cloud.yandex.net:443");
