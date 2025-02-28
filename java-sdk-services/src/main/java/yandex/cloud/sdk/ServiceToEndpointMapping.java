@@ -7,8 +7,13 @@ import java.util.Map;
 @Generated("ServiceToEndpointMappingGenerator")
 class ServiceToEndpointMapping {
     public final static Map<String, String> map = new IdentityHashMap<String, String>() {{
+        put("ai-assistants", "assistant.api.cloud.yandex.net:443");
+        put("ai-files", "assistant.api.cloud.yandex.net:443");
+        put("ai-foundation-models", "llm.api.cloud.yandex.net:443");
+        put("ai-llm", "llm.api.cloud.yandex.net:443");
         put("ai-speechkit", "transcribe.api.cloud.yandex.net:443");
         put("ai-stt", "transcribe.api.cloud.yandex.net:443");
+        put("ai-stt-v3", "stt.api.cloud.yandex.net:443");
         put("ai-translate", "translate.api.cloud.yandex.net:443");
         put("ai-vision", "vision.api.cloud.yandex.net:443");
         put("ai-vision-ocr", "ocr.api.cloud.yandex.net:443");
@@ -16,6 +21,7 @@ class ServiceToEndpointMapping {
         put("apigateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("application-load-balancer", "alb.api.cloud.yandex.net:443");
         put("apploadbalancer", "alb.api.cloud.yandex.net:443");
+        put("audittrails", "audittrails.api.cloud.yandex.net:443");
         put("baas", "backup.api.cloud.yandex.net:443");
         put("backup", "backup.api.cloud.yandex.net:443");
         put("billing", "billing.api.cloud.yandex.net:443");
@@ -23,8 +29,15 @@ class ServiceToEndpointMapping {
         put("cdn", "cdn.api.cloud.yandex.net:443");
         put("certificate-manager", "certificate-manager.api.cloud.yandex.net:443");
         put("certificate-manager-data", "data.certificate-manager.api.cloud.yandex.net:443");
+        put("certificate-manager-private-ca", "private-ca.certificate-manager.api.cloud.yandex.net:443");
+        put("certificate-manager-private-ca-data", "data.private-ca.certificate-manager.api.cloud.yandex.net:443");
+        put("cic", "cic.api.cloud.yandex.net:443");
+        put("cloud-registry", "registry.api.cloud.yandex.net:443");
+        put("cloudapps", "cloudapps.api.cloud.yandex.net:443");
         put("cloudbackup", "backup.api.cloud.yandex.net:443");
         put("clouddesktops", "clouddesktops.api.cloud.yandex.net:443");
+        put("cloudrouter", "cloudrouter.api.cloud.yandex.net:443");
+        put("cloudvideo", "video.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
@@ -33,6 +46,8 @@ class ServiceToEndpointMapping {
         put("datatransfer", "datatransfer.api.cloud.yandex.net:443");
         put("dns", "dns.api.cloud.yandex.net:443");
         put("endpoint", "api.cloud.yandex.net:443");
+        put("fomo-dataset", "fomo-dataset.api.cloud.yandex.net:443");
+        put("fomo-tuning", "fomo-tuning.api.cloud.yandex.net:443");
         put("iam", "iam.api.cloud.yandex.net:443");
         put("iot-broker", "iot-broker.api.cloud.yandex.net:443");
         put("iot-data", "iot-data.api.cloud.yandex.net:443");
@@ -48,7 +63,7 @@ class ServiceToEndpointMapping {
         put("log-ingestion", "ingester.logging.yandexcloud.net:443");
         put("log-reading", "reader.logging.yandexcloud.net:443");
         put("logging", "logging.api.cloud.yandex.net:443");
-        put("logs", "logs.api.cloud.yandex.net:443");
+        put("managed-airflow", "airflow.api.cloud.yandex.net:443");
         put("managed-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("managed-elasticsearch", "mdb.api.cloud.yandex.net:443");
         put("managed-greenplum", "mdb.api.cloud.yandex.net:443");
@@ -61,6 +76,7 @@ class ServiceToEndpointMapping {
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
         put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
         put("marketplace", "marketplace.api.cloud.yandex.net:443");
+        put("marketplace-pim", "marketplace.api.cloud.yandex.net:443");
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("mdb-mongodb", "mdb.api.cloud.yandex.net:443");
         put("mdb-mysql", "mdb.api.cloud.yandex.net:443");
@@ -72,16 +88,25 @@ class ServiceToEndpointMapping {
         put("operation", "operation.api.cloud.yandex.net:443");
         put("organization-manager", "organization-manager.api.cloud.yandex.net:443");
         put("organizationmanager", "organization-manager.api.cloud.yandex.net:443");
+        put("quota-manager", "quota-manager.api.cloud.yandex.net:443");
+        put("quotamanager", "quota-manager.api.cloud.yandex.net:443");
         put("resource-manager", "resource-manager.api.cloud.yandex.net:443");
         put("resourcemanager", "resource-manager.api.cloud.yandex.net:443");
+        put("searchapi", "searchapi.api.cloud.yandex.net:443");
         put("serialssh", "serialssh.cloud.yandex.net:9600");
         put("serverless-apigateway", "serverless-apigateway.api.cloud.yandex.net:443");
         put("serverless-containers", "serverless-containers.api.cloud.yandex.net:443");
+        put("serverless-eventrouter", "serverless-eventrouter.api.cloud.yandex.net:443");
         put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
         put("serverless-gateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
+        put("serverless-workflows", "serverless-workflows.api.cloud.yandex.net:443");
+        put("serverlesseventrouter-events", "events.eventrouter.serverless.yandexcloud.net:443");
+        put("smart-captcha", "smartcaptcha.api.cloud.yandex.net:443");
+        put("smart-web-security", "smartwebsecurity.api.cloud.yandex.net:443");
         put("storage", "storage.yandexcloud.net:443");
         put("storage-api", "storage.api.cloud.yandex.net:443");
+        put("video", "video.api.cloud.yandex.net:443");
         put("vpc", "vpc.api.cloud.yandex.net:443");
         put("ydb", "ydb.api.cloud.yandex.net:443");
     }};
