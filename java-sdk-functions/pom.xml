@@ -7,12 +7,12 @@
     <parent>
         <groupId>com.yandex.cloud</groupId>
         <artifactId>java-sdk</artifactId>
-        <version>2.6.6</version>
+        <version>2.6.7</version>
     </parent>
 
     <groupId>com.yandex.cloud</groupId>
     <artifactId>java-sdk-functions</artifactId>
-    <version>2.6.6</version>
+    <version>2.6.7</version>
     <packaging>jar</packaging>
 
     <name>Yandex Cloud Functions Library for Java</name>

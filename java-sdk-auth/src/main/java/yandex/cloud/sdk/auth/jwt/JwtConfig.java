@@ -30,7 +30,7 @@ public class JwtConfig {
      * Creates builder for <code>JwtConfig</code>
      * @return {@link JwtConfigBuilder} object
      */
-    public JwtConfigBuilder builder() {
+    public static JwtConfigBuilder builder() {
         return new JwtConfigBuilder();
     }
 

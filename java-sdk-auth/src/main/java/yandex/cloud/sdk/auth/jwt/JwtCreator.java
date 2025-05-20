@@ -12,14 +12,14 @@ import java.util.Date;
  * Generates JWT stored in {@link Jwt} object. Issuer of JWT is service account (id is used).
  * Token is signed by service account's private key using PS256 algorithm.
  * <br>
- * Audience and TTL can be specified using {@link JwtConfig}. Default audience is {@value DEFAUL_ENDPOINT}
+ * Audience and TTL can be specified using {@link JwtConfig}. Default audience is {@value DEFAULT_ENDPOINT}
  * and default TTL is 1 hour
  */
 public class JwtCreator {
     /**
      * Default endpoint value used in generated JWT audience field
      */
-    private static final String DEFAUL_ENDPOINT = "https://iam.api.cloud.yandex.net/iam/v1/tokens";
+    private static final String DEFAULT_ENDPOINT = "https://iam.api.cloud.yandex.net/iam/v1/tokens";
     /**
      * Default TTL value for generated JWT
      */
@@ -38,7 +38,7 @@ public class JwtCreator {
      * Constructs a <code>JwtCreator</code> with default configuration
      */
     public JwtCreator() {
-        this.endpoint = DEFAUL_ENDPOINT;
+        this.endpoint = DEFAULT_ENDPOINT;
         this.ttl = DEFAULT_TTL;
     }
 
@@ -50,7 +50,7 @@ public class JwtCreator {
         if (config.getEndpoint() != null) {
             this.endpoint = config.getEndpoint();
         } else {
-            this.endpoint = DEFAUL_ENDPOINT;
+            this.endpoint = DEFAULT_ENDPOINT;
         }
 
         if (config.getTtl() != null) {

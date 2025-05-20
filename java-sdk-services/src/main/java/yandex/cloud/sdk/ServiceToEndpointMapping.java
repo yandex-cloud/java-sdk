@@ -69,12 +69,15 @@ class ServiceToEndpointMapping {
         put("managed-greenplum", "mdb.api.cloud.yandex.net:443");
         put("managed-kafka", "mdb.api.cloud.yandex.net:443");
         put("managed-kubernetes", "mks.api.cloud.yandex.net:443");
+        put("managed-metastore", "metastore.api.cloud.yandex.net:443");
         put("managed-mongodb", "mdb.api.cloud.yandex.net:443");
         put("managed-mysql", "mdb.api.cloud.yandex.net:443");
         put("managed-opensearch", "mdb.api.cloud.yandex.net:443");
         put("managed-postgresql", "mdb.api.cloud.yandex.net:443");
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
+        put("managed-spark", "spark.api.cloud.yandex.net:443");
         put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
+        put("managed-trino", "trino.api.cloud.yandex.net:443");
         put("marketplace", "marketplace.api.cloud.yandex.net:443");
         put("marketplace-pim", "marketplace.api.cloud.yandex.net:443");
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
