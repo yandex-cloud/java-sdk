@@ -7,7 +7,7 @@ Java SDK for Yandex.Cloud services.
 <dependency>
     <groupId>com.yandex.cloud</groupId>
     <artifactId>java-sdk-services</artifactId>
-    <version>2.6.7</version>
+    <version>2.7.0</version>
 </dependency>
 ```
 
