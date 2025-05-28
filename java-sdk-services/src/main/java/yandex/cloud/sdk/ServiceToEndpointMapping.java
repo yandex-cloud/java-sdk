@@ -48,6 +48,7 @@ class ServiceToEndpointMapping {
         put("endpoint", "api.cloud.yandex.net:443");
         put("fomo-dataset", "fomo-dataset.api.cloud.yandex.net:443");
         put("fomo-tuning", "fomo-tuning.api.cloud.yandex.net:443");
+        put("gitlab", "gitlab.api.cloud.yandex.net:443");
         put("iam", "iam.api.cloud.yandex.net:443");
         put("iot-broker", "iot-broker.api.cloud.yandex.net:443");
         put("iot-data", "iot-data.api.cloud.yandex.net:443");
