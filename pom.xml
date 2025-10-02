@@ -172,6 +172,7 @@
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>ossrh-s01</publishingServerId>
+                            <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
                 </plugins>
