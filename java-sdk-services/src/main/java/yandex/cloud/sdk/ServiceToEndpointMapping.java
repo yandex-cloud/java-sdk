@@ -24,6 +24,7 @@ class ServiceToEndpointMapping {
         put("audittrails", "audittrails.api.cloud.yandex.net:443");
         put("baas", "backup.api.cloud.yandex.net:443");
         put("backup", "backup.api.cloud.yandex.net:443");
+        put("baremetal", "baremetal.api.cloud.yandex.net:443");
         put("billing", "billing.api.cloud.yandex.net:443");
         put("broker-data", "iot-data.api.cloud.yandex.net:443");
         put("cdn", "cdn.api.cloud.yandex.net:443");
@@ -39,6 +40,7 @@ class ServiceToEndpointMapping {
         put("cloudrouter", "cloudrouter.api.cloud.yandex.net:443");
         put("cloudvideo", "video.api.cloud.yandex.net:443");
         put("compute", "compute.api.cloud.yandex.net:443");
+        put("connection-manager", "connectionmanager.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
         put("dataproc-manager", "dataproc-manager.api.cloud.yandex.net:443");
@@ -56,6 +58,7 @@ class ServiceToEndpointMapping {
         put("k8s", "mks.api.cloud.yandex.net:443");
         put("kms", "kms.api.cloud.yandex.net:443");
         put("kms-crypto", "kms.yandex:443");
+        put("kspm", "kspm.api.cloud.yandex.net:443");
         put("load-balancer", "load-balancer.api.cloud.yandex.net:443");
         put("loadtesting", "loadtesting.api.cloud.yandex.net:443");
         put("locator", "locator.api.cloud.yandex.net:443");
@@ -77,8 +80,10 @@ class ServiceToEndpointMapping {
         put("managed-postgresql", "mdb.api.cloud.yandex.net:443");
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
         put("managed-spark", "spark.api.cloud.yandex.net:443");
+        put("managed-spqr", "mdb.api.cloud.yandex.net:443");
         put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
         put("managed-trino", "trino.api.cloud.yandex.net:443");
+        put("managed-ytsaurus", "ytsaurus.api.cloud.yandex.net:443");
         put("marketplace", "marketplace.api.cloud.yandex.net:443");
         put("marketplace-pim", "marketplace.api.cloud.yandex.net:443");
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
@@ -87,6 +92,7 @@ class ServiceToEndpointMapping {
         put("mdb-opensearch", "mdb.api.cloud.yandex.net:443");
         put("mdb-postgresql", "mdb.api.cloud.yandex.net:443");
         put("mdb-redis", "mdb.api.cloud.yandex.net:443");
+        put("mdb-spqr", "mdb.api.cloud.yandex.net:443");
         put("mdbproxy", "mdbproxy.api.cloud.yandex.net:443");
         put("monitoring", "monitoring.api.cloud.yandex.net:443");
         put("operation", "operation.api.cloud.yandex.net:443");

@@ -4,6 +4,7 @@ package yandex.cloud.sdk.auth.metadata;
  * Signals that some error occurred during metadata retrieval
  */
 public class MetadataException extends RuntimeException {
+    private static final long serialVersionUID = -7429709782348361734L;
     /**
      * Metadata key that was failed to retrieve
      */

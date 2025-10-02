@@ -2,7 +2,7 @@ package yandex.cloud.sdk.auth.jwt;
 
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.SignatureAlgorithm;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -76,19 +76,19 @@ public class JwtCreator {
      * @return generated JWT
      */
     public Jwt generateJwt(ServiceAccountKey serviceAccountKey, Duration ttl) {
-        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.PS256;
+        SignatureAlgorithm signatureAlgorithm = Jwts.SIG.PS256;
 
         Instant curInstant = Instant.now();
         Instant exp = curInstant.plus(ttl);
 
         JwtBuilder builder = Jwts.builder()
-                .setIssuer(serviceAccountKey.getServiceAccountId())
-                .setIssuedAt(Date.from(curInstant))
-                .setExpiration(Date.from(exp))
-                .setAudience(endpoint)
+                .issuer(serviceAccountKey.getServiceAccountId())
+                .issuedAt(Date.from(curInstant))
+                .expiration(Date.from(exp))
+                .audience().add(endpoint).and()
                 .signWith(serviceAccountKey.getPrivateKey(), signatureAlgorithm);
 
-        builder.setHeaderParam("kid", serviceAccountKey.getKeyId());
+        builder = builder.header().add("kid", serviceAccountKey.getKeyId()).and();
         return new Jwt(builder.compact(), exp);
     }
 }

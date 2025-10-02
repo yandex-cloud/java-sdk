@@ -4,11 +4,14 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.grpc.ManagedChannel;
-import io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder;
+
 import yandex.cloud.api.iam.v1.IamTokenServiceGrpc;
+import yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest;
+import yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse;
 import yandex.cloud.sdk.auth.IamToken;
 import yandex.cloud.sdk.auth.apikey.ApiKey;
 import yandex.cloud.sdk.auth.apikey.InvalidServiceAccountKeyException;
+import yandex.cloud.sdk.auth.grpc.ManagedChannelFactory;
 import yandex.cloud.sdk.auth.jwt.JwtCreator;
 import yandex.cloud.sdk.auth.jwt.ServiceAccountKey;
 import yandex.cloud.sdk.auth.useragent.UserAgent;
@@ -17,9 +20,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.time.Instant;
 import java.util.Objects;
-
-import static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest;
-import static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse;
 
 /**
  * Exchanges API key for IAM token.
@@ -144,7 +144,7 @@ public class ApiKeyCredentialProvider implements CredentialProvider {
                 apiKey = apiKey.withJwtCreator(jwtCreator);
             }
 
-            ManagedChannel managedChannel = NettyChannelBuilder.forTarget(endpoint).userAgent(userAgent).build();
+            ManagedChannel managedChannel = ManagedChannelFactory.getInstance().newManagedChannel(endpoint, userAgent);
             return new ApiKeyCredentialProvider(apiKey, managedChannel);
         }
 

@@ -4,6 +4,7 @@ package yandex.cloud.sdk.auth.metadata;
  * Signals that malformed URL has been found.
  */
 public class MalformedURLException extends RuntimeException {
+    private static final long serialVersionUID = -2080377029374713586L;
     /**
      * Malformed url that caused this exception
      */
