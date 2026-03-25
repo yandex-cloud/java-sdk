@@ -16,7 +16,7 @@ public class DownloadCertificateExample {
 
     public static void main(String[] args) {
         ServiceFactory factory = ServiceFactory.builder()
-                .credentialProvider(Auth.oauthTokenBuilder().fromEnv("YC_OAUTH"))
+                .credentialProvider(Auth.iamTokenBuilder().token("CggVAg******MjE="))
                 .requestTimeout(Duration.ofMinutes(1))
                 .build();
 

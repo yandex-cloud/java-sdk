@@ -19,7 +19,11 @@ import static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRe
 /**
  * Exchanges OAuth token for IAM token.
  * OAuth token is exchanged by querying IamTokenService.
+ * <p>
+ * <b>Warning:</b> Deprecated credential provider.
+ * By the end of 2026, the use of oauth tokens in the Yandex cloud will be discontinued.
  */
+@Deprecated()
 public class OauthCredentialProvider implements CredentialProvider {
     private final String oauth;
     private final ManagedChannel channel;
@@ -47,6 +51,8 @@ public class OauthCredentialProvider implements CredentialProvider {
 
     @Override
     public IamToken get() {
+        System.out.println("WARN: OAuthCredentialProvider is deprecated. Please consider to use other CredentialProvider e.g. ApiKeyCredentialProvider or IamTokenCredentialProvider.");
+
         CreateIamTokenRequest request = CreateIamTokenRequest.newBuilder()
                 .setYandexPassportOauthToken(oauth)
                 .build();

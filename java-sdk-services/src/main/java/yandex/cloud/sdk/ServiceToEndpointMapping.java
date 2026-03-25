@@ -18,6 +18,7 @@ class ServiceToEndpointMapping {
         put("ai-vision", "vision.api.cloud.yandex.net:443");
         put("ai-vision-ocr", "ocr.api.cloud.yandex.net:443");
         put("alb", "alb.api.cloud.yandex.net:443");
+        put("alert-sink", "alert-sink.api.cloud.yandex.net:443");
         put("apigateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
         put("application-load-balancer", "alb.api.cloud.yandex.net:443");
         put("apploadbalancer", "alb.api.cloud.yandex.net:443");
@@ -42,6 +43,7 @@ class ServiceToEndpointMapping {
         put("compute", "compute.api.cloud.yandex.net:443");
         put("connection-manager", "connectionmanager.api.cloud.yandex.net:443");
         put("container-registry", "container-registry.api.cloud.yandex.net:443");
+        put("datacatalog", "datacatalog.api.cloud.yandex.net:443");
         put("dataproc", "dataproc.api.cloud.yandex.net:443");
         put("dataproc-manager", "dataproc-manager.api.cloud.yandex.net:443");
         put("datasphere", "datasphere.api.cloud.yandex.net:443");
@@ -81,11 +83,11 @@ class ServiceToEndpointMapping {
         put("managed-redis", "mdb.api.cloud.yandex.net:443");
         put("managed-spark", "spark.api.cloud.yandex.net:443");
         put("managed-spqr", "mdb.api.cloud.yandex.net:443");
-        put("managed-sqlserver", "mdb.api.cloud.yandex.net:443");
         put("managed-trino", "trino.api.cloud.yandex.net:443");
         put("managed-ytsaurus", "ytsaurus.api.cloud.yandex.net:443");
         put("marketplace", "marketplace.api.cloud.yandex.net:443");
         put("marketplace-pim", "marketplace.api.cloud.yandex.net:443");
+        put("marketplace-stacklandlicenseapi", "marketplace.api.cloud.yandex.net:443");
         put("mdb-clickhouse", "mdb.api.cloud.yandex.net:443");
         put("mdb-mongodb", "mdb.api.cloud.yandex.net:443");
         put("mdb-mysql", "mdb.api.cloud.yandex.net:443");
@@ -109,6 +111,7 @@ class ServiceToEndpointMapping {
         put("serverless-eventrouter", "serverless-eventrouter.api.cloud.yandex.net:443");
         put("serverless-functions", "serverless-functions.api.cloud.yandex.net:443");
         put("serverless-gateway-connections", "apigateway-connections.api.cloud.yandex.net:443");
+        put("serverless-mcp-gateway", "serverless-mcp-gateway.api.cloud.yandex.net:443");
         put("serverless-triggers", "serverless-triggers.api.cloud.yandex.net:443");
         put("serverless-workflows", "serverless-workflows.api.cloud.yandex.net:443");
         put("serverlesseventrouter-events", "events.eventrouter.serverless.yandexcloud.net:443");
@@ -118,6 +121,7 @@ class ServiceToEndpointMapping {
         put("storage-api", "storage.api.cloud.yandex.net:443");
         put("video", "video.api.cloud.yandex.net:443");
         put("vpc", "vpc.api.cloud.yandex.net:443");
+        put("ycvc", "yc-tools-version-control.cloud.yandex.net:443");
         put("ydb", "ydb.api.cloud.yandex.net:443");
     }};
 }

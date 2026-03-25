@@ -14,9 +14,13 @@ public class Auth {
 
     /**
      * Creates an {@link OauthCredentialProvider.Builder} to build a provider that provides credentials from oauth token
+     * <p>
+     * <b>Warning:</b> OAuth credential provider is deprecated.
+     * By the end of 2026, the use of oauth tokens in the Yandex Cloud will be discontinued.
      *
      * @return <code>OauthCredentialProvider.Builder</code> object
      */
+    @Deprecated
     public static OauthCredentialProvider.Builder oauthTokenBuilder() {
         return OauthCredentialProvider.builder();
     }

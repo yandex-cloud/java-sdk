@@ -37,7 +37,7 @@ public class ComputeExample {
     public static void main(String[] args) throws Exception {
         // Configuration
         ServiceFactory factory = ServiceFactory.builder()
-                .credentialProvider(Auth.oauthTokenBuilder().fromEnv("YC_OAUTH"))
+                .credentialProvider(Auth.iamTokenBuilder().token("CggVAg******MjE="))
                 .requestTimeout(Duration.ofMinutes(1))
                 .build();
         InstanceServiceBlockingStub instanceService = factory.create(InstanceServiceBlockingStub.class, InstanceServiceGrpc::newBlockingStub);

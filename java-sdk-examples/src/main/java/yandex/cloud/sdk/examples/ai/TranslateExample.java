@@ -15,7 +15,7 @@ public class TranslateExample {
     public static void main(String[] args) {
         // Configuration
         ServiceFactory factory = ServiceFactory.builder()
-                .credentialProvider(Auth.oauthTokenBuilder().fromEnv("YC_OAUTH"))
+                .credentialProvider(Auth.iamTokenBuilder().token("CggVAg******MjE="))
                 .requestTimeout(Duration.ofMinutes(1))
                 .build();
         TranslationServiceBlockingStub translationService = factory.create(TranslationServiceBlockingStub.class, TranslationServiceGrpc::newBlockingStub);

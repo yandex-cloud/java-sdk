@@ -25,7 +25,7 @@ public class PostgreSQLExample {
     public static void main(String[] args) throws Exception {
         // Configuration
         ServiceFactory factory = ServiceFactory.builder()
-                .credentialProvider(Auth.oauthTokenBuilder().fromEnv("YC_OAUTH"))
+                .credentialProvider(Auth.iamTokenBuilder().token("CggVAg******MjE="))
                 .requestTimeout(Duration.ofMinutes(1))
                 .build();
         ClusterServiceBlockingStub clusterService = factory.create(ClusterServiceBlockingStub.class, ClusterServiceGrpc::newBlockingStub);

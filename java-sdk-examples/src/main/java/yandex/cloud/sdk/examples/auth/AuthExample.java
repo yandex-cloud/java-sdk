@@ -4,7 +4,6 @@ import yandex.cloud.sdk.auth.Auth;
 import yandex.cloud.sdk.auth.jwt.ServiceAccountKey;
 import yandex.cloud.sdk.auth.provider.AuthUpdater;
 import yandex.cloud.sdk.auth.provider.CredentialProvider;
-import yandex.cloud.sdk.auth.provider.OauthCredentialProvider;
 
 import java.nio.file.Paths;
 import java.util.concurrent.Executors;
@@ -12,16 +11,6 @@ import java.util.concurrent.ScheduledExecutorService;
 
 public class AuthExample {
     public static void main(String[] args) {
-        { // From oauth
-            CredentialProvider oauthProvider1 = OauthCredentialProvider.builder()
-                    .fromEnv("TOKEN")
-                    .build();
-
-            CredentialProvider oauthProvider2 = OauthCredentialProvider.builder()
-                    .fromFile(Paths.get("oauth.txt"))
-                    .build();
-        }
-
         { // From compute engine (metadata server)
             CredentialProvider defaultComputeEngine = Auth.computeEngineBuilder().build();
         }
